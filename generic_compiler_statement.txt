@@ -1,0 +1,2 @@
+//Can replace clang with gcc or whatever
+clang -std=c99 -pedantic -o generic generic.c
