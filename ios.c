@@ -11,7 +11,7 @@ int main(void)
     char name[1024];
 
     //Read characters from hello.txt a char at a time
-    fp = fopen("hello.txt", "r");
+    fp = fopen("text/hello.txt", "r");
 
     while ((c = fgetc(fp)) != EOF)
         printf("%c", c);
@@ -20,7 +20,7 @@ int main(void)
     fclose(fp);
 
     //Read a quote from quote.txt a line at a time
-    fp = fopen("quote.txt", "r");
+    fp = fopen("text/quote.txt", "r");
     
     while (fgets(s, sizeof s, fp) != NULL)
         printf("%d: %s", ++linecount, s);
@@ -29,7 +29,7 @@ int main(void)
     fclose(fp);
 
     //Read formatted input using fscanf
-    fp = fopen("whales.txt", "r");
+    fp = fopen("text/whales.txt", "r");
 
     while (fscanf(fp, "%s %f %d", name, &length, &mass) != EOF)
         printf("%s whale, %d tonnes, %.1f meters\n", name, mass, length);
