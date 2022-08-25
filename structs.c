@@ -9,15 +9,13 @@ struct person {
     int weight;
 };
 
-typedef struct person person;
-
-void lname_assign(person *p, char *lname) {
+void lname_assign(struct person *p, char *lname) {
     p->lname = lname;
 }
 
 int main(void) {
-    person ryan = {.fname="Ryan", .sex="Male", .age=27, .height=75, .weight=205};
-    person evan;
+    struct person ryan = {.fname="Ryan", .sex="Male", .age=27, .height=75, .weight=205};
+    struct person evan;
     evan.fname = "Evan";
     evan.sex = "Male";
     evan.age = 25;
